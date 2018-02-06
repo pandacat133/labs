@@ -4,30 +4,44 @@ body,html, h1, h2, h3, p, ol, ul, li, a{
     margin: 0;
     padding: 0;
     border: 0;
+    font-size: 100%;
+    font: inherit;
 }
 
 body{
     padding: 0 0 0 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: url(../images/background.jpg) #5f5f5f no-repeat;
-    background-size: cover;
+    background-color: #333333;
 }
 
 h1{
-    font-size: 30px;
+    font-size: 40px;
     color: #7facaa;
     margin: 15px 0 15px 0;
     text-align: center;
     font-family: 'Asul', sans-serif;
+    font-weight: bold;
 }
 
 h2{
-    font-size: 20px;
+    font-size: 30px;
     color: #7facaa;
     margin: 10px 0 10px 0;
     border-bottom: 1px solid #CCCCCC;
     padding-bottom: 3px;
     font-family: 'Asul', sans-serif;
+    font-weight: bold;
+}
+
+h3{
+    font-family: 'Asul', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    background-color: #333333;
+    padding: 5px 0 5px 15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: bold;
 }
 
 p{
@@ -61,6 +75,13 @@ ol{
     height: 100px;
 }
 
+.main{
+    background: #f5f5f5;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
     /*SPECIFIC TO NAV CLASS ON ENTIRE WEBSITE*/
     .nav{
         display: flex;
@@ -83,11 +104,22 @@ ol{
         display: inline;
     }
 
-.main{
-    background: #f5f5f5;
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+/*SPECIFIC TO HOME PAGE*/
+
+.featuredImage{
+    margin: auto;
+    background: url("../images/cucumberSandwiches.jpeg") no-repeat;
+    width: 616px;
+    height: 462px;
+}
+
+.featuredImage a:hover{
+    text-decoration: underline;
+}
+
+.featuredImage a{
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 /*SPECIFIC TO RECIPES PAGE*/
@@ -104,7 +136,13 @@ ol{
     background-color: #FFFFFF;
 }
 
-.recipes h3{
+.recipes img{
+    float: left;
+    width: 75px;
+    padding: 6px 15px 0 0;
+}
+
+.recipes h2{
     border-bottom: 0;
 }
 
