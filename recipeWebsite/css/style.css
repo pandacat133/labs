@@ -172,3 +172,42 @@ ol{
     display: block;
     height: 200px;
 }
+
+/*SPECIFIC TO SUGGEST PAGE*/
+
+label, input{
+    display: block;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input{
+    width: 500px;
+    margin-bottom: 25px;
+}
+
+input[type=submit]{
+    width: 120px;
+    font-size: 30px;
+}
+
+input[type=text]{
+    border: 2px solid #7FACAA;
+    font-size: 24px;
+    padding: 7px;
+}
+
+textarea{
+    width: 500px;
+    height: 500px;
+    padding: 7px;
+    border: 2px solid #7FACAA;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.checkBox label, input{
+    display: inline;
+}
