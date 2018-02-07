@@ -175,16 +175,14 @@ ol{
 
 /*SPECIFIC TO SUGGEST PAGE*/
 
-label, input{
-    display: block;
-}
-
-label {
-    margin-bottom: 10px;
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
 }
 
 input{
-    width: 500px;
+    width: 90%;
     margin-bottom: 25px;
 }
 
@@ -195,12 +193,12 @@ input[type=submit]{
 
 input[type=text]{
     border: 2px solid #7FACAA;
-    font-size: 24px;
+    font-size: 20px;
     padding: 7px;
 }
 
 textarea{
-    width: 500px;
+    width: 90%;
     height: 500px;
     padding: 7px;
     border: 2px solid #7FACAA;
@@ -208,6 +206,15 @@ textarea{
     font-size: 24px;
 }
 
-.checkBox label, input{
-    display: inline;
+.checkBox{
+    display: flex;
+}
+
+.checkBox label{
+    width: 130px;
+}
+
+.textInput label{
+    display: block;
+    margin-bottom: 10px;
 }
