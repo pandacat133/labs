@@ -1,22 +1,13 @@
 $(document).ready(function() {
-
-    $('.tour').on('click', 'button', function() {
-        var tour = $(this).closest('.tour');
-        var discount = tour.data('discount');
-        var message = $('<span>Call 1-555-jquery-air for a $' + discount + ' discount.</span>');
-        tour.append(message);
-        $(this).remove();
+    $('#tour').on('click', 'button', function() {
+        $('.photos').slideToggle();
     });
 
-    $('#filters').on('click', '.on-sale', function() {
-        $('.highlight').removeClass('highlight');
-        $('.tour').filter('.on-sale').addClass('highlight');
+    function showPhotos() {
+        $(this).find('span').slideToggle();
+    }
 
-    });
-
-    $('#filters').on('click', '.featured', function() {
-        $('.highlight').removeClass('highlight');
-        $('.tour').filter('.featured').addClass('highlight');
-    });
+    $('.photos').on('mouseenter', 'li', showPhotos);
+    $('.photos').on('mouseleave', 'li', showPhotos);
 
 });
