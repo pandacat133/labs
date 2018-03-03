@@ -1,24 +1,22 @@
-jQuery(document).ready(function () {
+$(document).ready(function() {
 
-    //SEARCHING THE DOM:
+    $('.tour').on('click', 'button', function() {
+        var tour = $(this).closest('.tour');
+        var discount = tour.data('discount');
+        var message = $('<span>Call 1-555-jquery-air for a $' + discount + ' discount.</span>');
+        tour.append(message);
+        $(this).remove();
+    });
 
-    //descendant selector
-    $("#destinations li");
-    //same as above but using traversal language
-    $("#destinations").find("li");
+    $('#filters').on('click', '.on-sale', function() {
+        $('.highlight').removeClass('highlight');
+        $('.tour').filter('.on-sale').addClass('highlight');
 
-    //first descendant selector
-    $("li:first");
-    //same as above but using traversal language
-    $("li").first();
+    });
 
+    $('#filters').on('click', '.featured', function() {
+        $('.highlight').removeClass('highlight');
+        $('.tour').filter('.featured').addClass('highlight');
+    });
 
-    //TRAVERSING THE DOM:
-    
-    //walking the DOM -- method chaining
-    $("li").first().next();
-    //walking UP the DOM
-    $("li").first().parent();
-    //walking DOWN the DOM
-    $("#destinations").children("li");
 });
