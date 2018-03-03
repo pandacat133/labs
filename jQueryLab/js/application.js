@@ -1,13 +1,11 @@
 $(document).ready(function() {
-    $('#tour').on('click', 'button', function() {
-        $('.photos').slideToggle();
+    $('#nights').on('keyup', function() {
+        var nights = +$(this).val();
+        var dailyPrice = +$(this).closest(".tour").data("daily-price");
+        $('#total').text(nights * dailyPrice);
+        $('#nights-count').text($(this).val());
     });
-
-    function showPhotos() {
-        $(this).find('span').slideToggle();
-    }
-
-    $('.photos').on('mouseenter', 'li', showPhotos);
-    $('.photos').on('mouseleave', 'li', showPhotos);
-
+    $('#nights').on('focus', function() {
+        var nights = +$(this).val(7);
+    });
 });
